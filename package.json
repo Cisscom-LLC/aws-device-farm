@@ -1,0 +1,21 @@
+{
+  "name": "@testjet/aws-device-farm",
+  "version": "0.5.1",
+  "main": "dist/index.js",
+  "scripts": {
+    "farm": "mkdir -p report && npx @testjet/aws-device-farm runTest --apkPath calculator.apk --projectName 'calculator - TestJet' --reportDestinationPath report --testCommand 'npx ts-node examples/e2e/calculator.test.ts'"
+  },
+  "bin": {
+    "aws-device-farm-run-test": "dist/bin.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-device-farm": "^3.154.0",
+    "@perf-profiler/logger": "^0.2.0",
+    "adm-zip": "^0.5.9",
+    "axios": "^1.1.3",
+    "commander": "^9.4.0"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.0"
+  }
+}
